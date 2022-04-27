@@ -72,7 +72,7 @@ window.config(padx=100, pady=50, bg=YELLOW)
 
 # Canvas - Leinwand
 canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0) 
-photo = PhotoImage(file=r"/home/mikeb15/Development/Python_Projects/100 Days of Code/28-Pomodoro_GUI_App/tomato.png") 
+photo = PhotoImage(file=r"tomato.png") 
 canvas.create_image(101, 112, image=photo)
 timer_text = canvas.create_text(101, 130, text="00:00", fill='white', font=(FONT_NAME, 45, 'bold'))
 canvas.grid(column=1, row=1)
