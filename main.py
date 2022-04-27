@@ -23,12 +23,12 @@ def reset_timer():
     canvas.itemconfig(timer_text, text="00:00")
     timer_label.config(text="Timer", fg=GREEN)
     counter_label.config(text="")
-    start_button.config(state = NORMAL) # Buuton wieder aktivieren
+    start_button.config(state = NORMAL) 
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 def start_timer():
     global reps
-    start_button.config(state = DISABLED) # Button Deaktivieren, damit Timer nich nochmal gestartet wird
+    start_button.config(state = DISABLED) 
     reps += 1
 
     work_sec = WORK_MIN * 60
@@ -71,8 +71,8 @@ window.title("Pomodoro")
 window.config(padx=100, pady=50, bg=YELLOW)
 
 # Canvas - Leinwand
-canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0) # highlightthickness = Rahmenstärke
-photo = PhotoImage(file=r"/home/mikeb15/Development/Python_Projects/100 Days of Code/28-Pomodoro_GUI_App/tomato.png") # Image vorbereiten
+canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0) 
+photo = PhotoImage(file=r"/home/mikeb15/Development/Python_Projects/100 Days of Code/28-Pomodoro_GUI_App/tomato.png") 
 canvas.create_image(101, 112, image=photo)
 timer_text = canvas.create_text(101, 130, text="00:00", fill='white', font=(FONT_NAME, 45, 'bold'))
 canvas.grid(column=1, row=1)
